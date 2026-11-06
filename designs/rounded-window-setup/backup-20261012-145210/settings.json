@@ -1,0 +1,38 @@
+{
+  "corners": {
+    "global-rounded-corner-settings": "{'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keepRoundedCorners': <{'maximized': <false>, 'fullscreen': <false>}>, 'borderRadius': <uint32 15>, 'smoothing': <0>, 'borderColor': <[0.5, 0.5, 0.5, 1.0]>, 'enabled': <true>}",
+    "skip-libadwaita-app": "true",
+    "skip-libhandy-app": "false",
+    "blacklist": "@as []",
+    "settings-version": "uint32 0"
+  },
+  "blur": {
+    "applications": {
+      "corner-radius": "12"
+    },
+    "popup": {
+      "dialog-corner-radius": "18",
+      "corner-radius": "18",
+      "osd-corner-radius": "28",
+      "osk-corner-radius": "0",
+      "notification-corner-radius": "18",
+      "menu-corner-radius": "20",
+      "quick-settings-corner-radius": "36"
+    }
+  },
+  "enabled": [
+    "monitor@astraext.github.io",
+    "ubuntu-dock@ubuntu.com",
+    "tiling-assistant@ubuntu.com",
+    "tasks-in-panel@fthx",
+    "space-bar@luchrioh",
+    "show-desktop-plus@attentivecoder",
+    "transparent-top-bar@zhanghai.me",
+    "overview-card-glass@local",
+    "dock-hover-glass@local",
+    "ding@rastersoft.com",
+    "blur-my-shell@aunetx",
+    "snapd-search-provider@canonical.com",
+    "web-search-provider@ubuntu.com"
+  ]
+}

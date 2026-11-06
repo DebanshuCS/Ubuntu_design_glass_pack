@@ -1,0 +1,17 @@
+/* Subtle menu tint; stock buttons, labels and selected values are untouched. */
+menu, popover.background {
+  background-color: rgba(32, 34, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Consistent desktop corner profile: 20px windows, 12px menus. */
+window.csd:not(.maximized):not(.fullscreen):not(.tiled) {
+  border-radius: 20px;
+}
+window.maximized, window.fullscreen, window.tiled {
+  border-radius: 0;
+}
+
+window.csd decoration { border-radius: 20px; }
+window.maximized decoration, window.fullscreen decoration, window.tiled decoration { border-radius: 0; }
+menu, popover.background { border-radius: 12px; }

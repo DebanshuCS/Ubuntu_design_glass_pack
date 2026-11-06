@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesGroup" id="controls_group">
+    <property name="title" translatable="yes">Controls</property>
+
+    <child>
+      <object class="AdwComboRow" id="leftClickAction_row">
+        <property name="title" translatable="yes">Left click action</property>
+        <property name="subtitle" translatable="yes">What happens when you left-click the icon</property>
+        <property name="model">
+          <object class="GtkStringList">
+            <items>
+              <item>Toggle desktop</item>
+              <item>Hide all</item>
+              <item>Restore windows</item>
+              <item>Hide focused</item>
+              <item>Do nothing</item>
+            </items>
+          </object>
+        </property>
+      </object>
+    </child>
+
+    <child>
+      <object class="AdwComboRow" id="middleClickAction_row">
+        <property name="title" translatable="yes">Middle click action</property>
+        <property name="subtitle" translatable="yes">What happens when you middle-click the icon</property>
+        <property name="model">
+          <object class="GtkStringList">
+            <items>
+              <item>Hide all</item>
+              <item>Hide focused</item>
+              <item>Toggle desktop</item>
+            </items>
+          </object>
+        </property>
+      </object>
+    </child>
+
+  </object>
+</interface>

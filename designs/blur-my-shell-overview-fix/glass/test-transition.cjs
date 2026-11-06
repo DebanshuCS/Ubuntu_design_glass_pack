@@ -1,0 +1,28 @@
+const fs = require('fs');
+const vm = require('vm');
+const assert = require('assert/strict');
+const source = fs.readFileSync('/home/user/.local/share/gnome-shell/extensions/overview-glass@local/extension.js', 'utf8');
+const helper = source.slice(source.indexOf('export function runOverviewTransition'), source.indexOf('export default class')).replace('export function', 'function');
+const context = vm.createContext({});
+vm.runInContext(helper, context);
+let received;
+const prototype = {ease(value, options) { received = {value, options}; return 17; }};
+const adjustment = Object.create(prototype);
+const controls = {_stateAdjustment: adjustment};
+const callback = () => {};
+assert.equal(context.runOverviewTransition(controls, function () {
+    return this._stateAdjustment.ease(1, {duration:250, onStopped:callback, mode:123});
+}, []), 17);
+assert.equal(received.options.duration,180);
+assert.equal(received.options.onStopped,callback);
+assert.equal(received.options.mode,123);
+assert.equal(Object.hasOwn(adjustment,'ease'),false);
+adjustment.ease(0,{duration:250});
+assert.equal(received.options.duration,250);
+assert.throws(() => context.runOverviewTransition(controls, () => {throw Error('test');}, []));
+assert.equal(Object.hasOwn(adjustment,'ease'),false);
+const own = function () {};
+adjustment.ease=own;
+context.runOverviewTransition(controls, () => {}, []);
+assert.equal(adjustment.ease,own);
+console.log('PASS: scoped duration, callback/easing preservation, return value, and restoration on success/error.');

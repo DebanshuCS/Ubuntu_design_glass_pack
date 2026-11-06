@@ -1,0 +1,36 @@
+/* Unified frost: neutral surfaces blend with backdrop colors.
+ * Opacity: windows .88, menus .94, dialogs .96. Text uses the stock dark theme.
+ * All outer corners use 12px; true fullscreen stays square.
+ */
+window.background:not(.desktopwindow):not(.desktopmenu) {
+  --window-bg-color: rgba(34, 36, 42, 0.88);
+  --view-bg-color: rgba(34, 36, 42, 0.30);
+  --sidebar-bg-color: rgba(38, 40, 46, 0.40);
+  --sidebar-backdrop-color: rgba(38, 40, 46, 0.40);
+  --headerbar-bg-color: rgba(38, 40, 46, 0.50);
+  --headerbar-backdrop-color: rgba(38, 40, 46, 0.50);
+  --dialog-bg-color: rgba(34, 36, 42, 0.96);
+  --popover-bg-color: rgba(34, 36, 42, 0.94);
+  background-color: rgba(34, 36, 42, 0.88);
+}
+window.dialog, window.messagedialog, window.fontchooserdialog,
+window.filechooserdialog, window.colorchooserdialog {
+  background-color: rgba(34, 36, 42, 0.96);
+}
+window.background dialog-host > dialog.background {
+  --window-bg-color: rgba(34, 36, 42, 0.96);
+  --view-bg-color: rgba(34, 36, 42, 0.70);
+  --headerbar-bg-color: rgba(38, 40, 46, 0.80);
+}
+window.background floating-sheet > sheet,
+window.background bottom-sheet > sheet {
+  background-color: rgba(34, 36, 42, 0.96);
+}
+popover > contents {
+  background-color: rgba(34, 36, 42, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+window.csd:not(.fullscreen), window.maximized:not(.fullscreen),
+floating-sheet > sheet { border-radius: 12px; }
+window.fullscreen { border-radius: 0; }

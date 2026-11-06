@@ -1,0 +1,12 @@
+[/]
+blacklist=@as []
+border-width=0
+custom-rounded-corner-settings=@a{sv} {}
+debug-mode=false
+focused-shadow={'horizontalOffset': 0, 'verticalOffset': 3, 'blurOffset': 18, 'spreadRadius': 0, 'opacity': 30}
+global-rounded-corner-settings={'padding': <{'left': uint32 0, 'right': 0, 'top': 0, 'bottom': 0}>, 'keepRoundedCorners': <{'maximized': true, 'fullscreen': false}>, 'borderRadius': <uint32 10>, 'smoothing': <1.0>, 'borderColor': <(0.0, 0.0, 0.0, 0.0)>, 'enabled': <true>}
+keep-shadow-for-maximized-fullscreen=false
+settings-version=uint32 9
+skip-libadwaita-app=false
+skip-libhandy-app=false
+unfocused-shadow={'horizontalOffset': 0, 'verticalOffset': 2, 'blurOffset': 12, 'spreadRadius': 0, 'opacity': 20}

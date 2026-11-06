@@ -1,0 +1,27 @@
+
+/* Readable black glass for older GTK dialog and menu surfaces. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog,
+popover.background,
+menu {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+
+/* Match GTK4 context menus, including Desktop Icons menus. */
+menu, menu.desktopmenu, popover.background {
+  background-color: rgba(12, 13, 16, 0.95);
+  background-image: none;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+window.desktopmenu { background-color: transparent; }
+menu menuitem:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* Strong black glass base for GTK3 application windows and Flutter GTK hosts. */
+window.background:not(.desktopwindow):not(.desktopmenu) {
+  background-color: rgba(12, 13, 16, 0.94);
+}

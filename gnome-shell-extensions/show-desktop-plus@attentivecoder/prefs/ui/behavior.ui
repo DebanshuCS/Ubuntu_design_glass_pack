@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesGroup" id="behavior_group">
+    <property name="title" translatable="yes">Behavior</property>
+
+    <child>
+      <object class="AdwSwitchRow" id="currentMonitor_row">
+        <property name="title" translatable="yes">Current monitor only</property>
+        <property name="subtitle" translatable="yes">Limit window hiding to the active display</property>
+      </object>
+    </child>
+
+  </object>
+</interface>

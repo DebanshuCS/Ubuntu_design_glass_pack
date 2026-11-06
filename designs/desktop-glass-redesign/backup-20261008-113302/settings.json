@@ -1,0 +1,13 @@
+{
+  "static-blur": "false",
+  "opacity": "215",
+  "dynamic-opacity": "true",
+  "sigma": "30",
+  "brightness": "1.0",
+  "corner-radius": "15",
+  "enable-all": "false",
+  "blur-on-overview": "false",
+  "unblur-when-fullscreen": "false",
+  "blur": "false",
+  "whitelist": "@as []"
+}

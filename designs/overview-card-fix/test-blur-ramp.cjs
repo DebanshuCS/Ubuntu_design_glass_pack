@@ -1,0 +1,17 @@
+const fs = require('fs');
+const vm = require('vm');
+const assert = require('assert/strict');
+const source = fs.readFileSync('/home/user/.local/share/gnome-shell/extensions/overview-card-glass@local/extension.js', 'utf8');
+assert.match(source, /CARD_BLUR_MS = 280/);
+assert.match(source, /BlurMode\.ACTOR/);
+assert.match(source, /wallpaper\.add_effect/);
+assert.doesNotMatch(source, /frost/);
+assert.doesNotMatch(source, /overviewDesktopVeil/);
+const start = source.indexOf('export function shouldBlurCard');
+const end = source.indexOf('export default class');
+const context = vm.createContext({});
+vm.runInContext('const CARD_BLUR_MS = 280;\n' + source.slice(start, end).replaceAll('export function', 'function'), context);
+assert.equal(context.shouldBlurCard(true, true, 1), false);
+assert.equal(context.shouldBlurCard(true, false, 1), true);
+assert.equal(context.wallpaperCloneOpacity(), 0);
+console.log('PASS: clear wallpaper while windows move; carrier becomes blurred wallpaper after settle.');

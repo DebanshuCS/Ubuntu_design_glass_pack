@@ -1,0 +1,23 @@
+{
+  "corners": "{'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keepRoundedCorners': <{'maximized': <true>, 'fullscreen': <false>}>, 'borderRadius': <uint32 20>, 'smoothing': <0.5>, 'borderColor': <[0.5, 0.5, 0.5, 1.0]>, 'enabled': <true>}",
+  "blur": {
+    "applications": {
+      "enable-all": "false",
+      "blur": "true",
+      "opacity": "255",
+      "dynamic-opacity": "false",
+      "corner-radius": "20",
+      "sigma": "30",
+      "blacklist": "['Plank', 'com.desktop.ding', 'Conky', 'com.rastersoft.ding', 'com.rastersoft.dingtest']"
+    },
+    "dash-to-dock": {
+      "corner-radius": "20"
+    },
+    "popup": {
+      "blur": "true",
+      "static-blur": "false",
+      "style-popup": "2",
+      "override-background": "true"
+    }
+  }
+}

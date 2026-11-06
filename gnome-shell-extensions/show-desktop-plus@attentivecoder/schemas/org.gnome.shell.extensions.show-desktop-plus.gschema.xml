@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="show-desktop-plus">
+
+  <enum id="org.gnome.shell.extensions.show-desktop-plus.panel-position">
+    <value value="0" nick="left-end"/>
+    <value value="1" nick="left"/>
+    <value value="2" nick="center"/>
+    <value value="3" nick="right"/>
+    <value value="4" nick="right-end"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.show-desktop-plus.middle-click-action">
+    <value value="0" nick="hide-all"/>
+    <value value="1" nick="hide-focused"/>
+    <value value="2" nick="toggle-desktop"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.show-desktop-plus.left-click-action">
+    <value value="0" nick="toggle-desktop"/>
+    <value value="1" nick="hide-all"/>
+    <value value="2" nick="restore-only"/>
+    <value value="3" nick="hide-focused"/>
+    <value value="4" nick="do-nothing"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.show-desktop-plus.icon-style">
+    <value value="0" nick="auto"/>
+    <value value="1" nick="desktop"/>
+    <value value="2" nick="computer"/>
+  </enum>
+
+  <schema path="/org/gnome/shell/extensions/show-desktop-plus/"
+          id="org.gnome.shell.extensions.show-desktop-plus">
+
+    <key name="button-position" enum="org.gnome.shell.extensions.show-desktop-plus.panel-position">
+      <default>'center'</default>
+      <summary>Position on panel</summary>
+      <description>Where the icon appears in the top bar</description>
+    </key>
+
+    <key name="left-click-action" enum="org.gnome.shell.extensions.show-desktop-plus.left-click-action">
+      <default>'toggle-desktop'</default>
+      <summary>Left click action</summary>
+      <description>What happens when you left-click the icon</description>
+    </key>
+
+    <key name="middle-click-action" enum="org.gnome.shell.extensions.show-desktop-plus.middle-click-action">
+      <default>'hide-all'</default>
+      <summary>Middle click action</summary>
+      <description>What happens when you middle-click the icon</description>
+    </key>
+
+    <key type="b" name="current-monitor-only">
+      <default>false</default>
+      <summary>Current monitor only</summary>
+      <description>Limit window hiding to the active display</description>
+   </key>
+
+    <key type="b" name="enable-hotkey">
+      <default>false</default>
+      <summary>Enable hotkey</summary>
+      <description>Enable the custom Show Desktop keyboard shortcut</description>
+    </key>
+
+    <key name="icon-style" enum="org.gnome.shell.extensions.show-desktop-plus.icon-style">
+      <default>'auto'</default>
+      <summary>Panel icon style</summary>
+      <description>Choose which icon is shown in the panel</description>
+    </key>
+
+    <key type="as" name="show-desktop-hotkey">
+      <default>['&lt;Super&gt;d']</default>
+      <summary>The hotkey</summary>
+    </key>
+    
+    <key type="b" name="show-hidden-count">
+      <default>true</default>
+      <summary>Show hidden window count</summary>
+      <description>Displays a badge with the number of hidden windows</description>
+   </key>
+
+  </schema>
+</schemalist>

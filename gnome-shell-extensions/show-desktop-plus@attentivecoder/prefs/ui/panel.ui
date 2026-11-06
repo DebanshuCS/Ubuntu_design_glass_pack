@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesGroup" id="panel_group">
+    <property name="title" translatable="yes">Panel</property>
+
+    <child>
+      <object class="AdwComboRow" id="panelButtonPosition_row">
+        <property name="title" translatable="yes">Button position</property>
+        <property name="subtitle" translatable="yes">Where the icon appears in the top bar</property>
+        <property name="model">
+          <object class="GtkStringList">
+            <items>
+              <item>Left end</item>
+              <item>Left</item>
+              <item>Center</item>
+              <item>Right</item>
+              <item>Right end</item>
+            </items>
+          </object>
+        </property>
+      </object>
+    </child>
+
+  </object>
+</interface>
+

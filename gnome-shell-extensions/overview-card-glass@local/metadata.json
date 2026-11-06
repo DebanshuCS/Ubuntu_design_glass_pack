@@ -1,0 +1,7 @@
+{
+  "uuid": "overview-card-glass@local",
+  "name": "Overview Card Glass",
+  "description": "Leave the desktop wallpaper and dock alone. After Mission Control settles, frost only the card behind app windows.",
+  "shell-version": ["50"],
+  "version": 11
+}

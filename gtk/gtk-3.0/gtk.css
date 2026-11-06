@@ -1,0 +1,141 @@
+/* Subtle menu tint; stock buttons, labels and selected values are untouched. */
+menu, popover.background {
+  background-color: rgba(32, 34, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* ── Rounded-corner fix ──────────────────────────────────────────────
+ * The "Rounded Window Corners Reborn" extension clips the window
+ * texture with a GPU shader.  The GTK CSD decoration must not paint
+ * any background, border, or box-shadow that could leak outside the
+ * shader's clip mask — that is what causes the white/light corner
+ * artifacts on dark windows (e.g. the terminal).
+ *
+ * Strategy:
+ *   • Keep the border-radius so GTK still reports the correct shape
+ *     to the compositor (hit-testing, input region).
+ *   • Zero out the box-shadow and make the decoration background
+ *     transparent so nothing is painted behind the corners.
+ *   • Maximized / fullscreen / tiled windows keep radius 0.
+ */
+window.csd decoration {
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+window.csd headerbar {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* Maximized — keep rounded corners like macOS */
+window.csd.maximized decoration {
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+window.csd.maximized headerbar {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* Fullscreen / tiled — edge-to-edge, no rounding */
+window.csd.fullscreen decoration,
+window.csd.tiled decoration,
+window.csd.tiled-top decoration,
+window.csd.tiled-bottom decoration,
+window.csd.tiled-left decoration,
+window.csd.tiled-right decoration {
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+window.csd.fullscreen headerbar,
+window.csd.tiled headerbar,
+window.csd.tiled-top headerbar,
+window.csd.tiled-bottom headerbar,
+window.csd.tiled-left headerbar,
+window.csd.tiled-right headerbar {
+  border-radius: 0;
+}
+
+/* ── GNOME Terminal — frosted glass ───────────────────────────────────
+ * Background surfaces at 0.92 alpha so compositor blur shows through.
+ * Text/prompt stays fully opaque — CSS alpha only affects backgrounds.
+ */
+
+/* Titlebar / headerbar */
+terminal-window headerbar,
+terminal-window .titlebar {
+  background-color: rgba(30, 32, 38, 0.97);
+  border: none;
+  box-shadow: none;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+terminal-window headerbar:backdrop,
+terminal-window .titlebar:backdrop {
+  background-color: rgba(26, 28, 34, 0.96);
+}
+
+/* Main window background */
+terminal-window.background,
+terminal-window.csd {
+  background-color: rgba(22, 24, 30, 0.97);
+}
+
+/* Notebook (tab bar + stack) — seamless, no borders */
+terminal-window notebook {
+  background-color: rgba(22, 24, 30, 0.97);
+  border: none;
+  box-shadow: none;
+}
+terminal-window notebook header {
+  background-color: rgba(22, 24, 30, 0.97);
+  border: none;
+  box-shadow: none;
+}
+terminal-window notebook header tabs {
+  background-color: rgba(22, 24, 30, 0.97);
+  border: none;
+}
+terminal-window notebook header tab {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 6px 6px 0 0;
+}
+terminal-window notebook header tab:checked {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+terminal-window notebook > stack {
+  background-color: rgba(22, 24, 30, 0.97);
+  border: none;
+}
+
+/* VTE terminal widget */
+terminal-window vte-terminal,
+terminal-window .terminal-screen {
+  background-color: rgba(22, 24, 30, 0.97);
+  border: none;
+  padding: 6px;
+}
+
+/* Scrollbar — thin and subtle */
+terminal-window scrollbar {
+  background-color: transparent;
+  border: none;
+}
+terminal-window scrollbar slider {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  min-width: 6px;
+}
+terminal-window scrollbar slider:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+terminal-window scrollbar trough {
+  background-color: transparent;
+  border: none;
+}

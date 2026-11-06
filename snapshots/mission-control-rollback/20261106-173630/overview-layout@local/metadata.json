@@ -1,0 +1,7 @@
+{
+    "uuid": "overview-layout@local",
+    "name": "Overview Layout",
+    "description": "Keep the Ubuntu Dock visible on top during Mission Control.",
+    "shell-version": ["50"],
+    "version": 3
+}

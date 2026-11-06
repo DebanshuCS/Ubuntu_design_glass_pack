@@ -1,0 +1,90 @@
+@import url("styles/panel.css");
+@import url("styles/dash.css");
+@import url("styles/popup/base.css");
+@import url("styles/popup/transparent.css");
+@import url("styles/popup/light.css");
+@import url("styles/popup/dark.css");
+@import url("styles/popup/menu-items.css");
+@import url("styles/overview.css");
+@import url("styles/appfolders.css");
+@import url("styles/panel-light-text.css");
+
+
+/* Local GNOME 50 / Yaru hover workaround: use rounded fills instead of
+ * large inset shadows. Scope to BMS transparent panels; keep the clock
+ * container clear because its inner .clock owns the highlight. */
+#panel.transparent-panel .panel-button,
+#panel.transparent-panel .panel-button.clock-display .clock {
+    box-shadow: none !important;
+    /* Replace Yaru's transparent border with equivalent outer spacing.
+     * Avoid painting a translucent rounded fill through the border path. */
+    border: none !important;
+    margin: 3px;
+    border-radius: 12px;
+    /* A transparent image plus radius makes St prerender the whole rounded
+     * background, avoiding its separate corner textures. No visible artwork. */
+    background-image: url("styles/bms-hover-transparent-v4.svg");
+    background-color: transparent;
+}
+
+#panel.transparent-panel .panel-button:hover,
+#panel.transparent-panel .panel-button:focus,
+#panel.transparent-panel .panel-button.clock-display:hover .clock,
+#panel.transparent-panel .panel-button.clock-display:focus .clock {
+    background-color: rgba(242, 242, 242, 0.17);
+}
+
+#panel.transparent-panel .panel-button:active,
+#panel.transparent-panel .panel-button:checked,
+#panel.transparent-panel .panel-button.clock-display:active .clock,
+#panel.transparent-panel .panel-button.clock-display:checked .clock {
+    background-color: rgba(242, 242, 242, 0.28);
+}
+
+#panel.transparent-panel .panel-button:active:hover,
+#panel.transparent-panel .panel-button:checked:hover,
+#panel.transparent-panel .panel-button.clock-display:active:hover .clock,
+#panel.transparent-panel .panel-button.clock-display:checked:hover .clock {
+    background-color: rgba(242, 242, 242, 0.32);
+}
+
+#panel.transparent-panel .panel-button.clock-display {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    /* The inner .clock supplies the inset; do not inset it twice. */
+    margin: 0;
+    border-radius: 0;
+    background-image: none;
+}
+
+/* Preserve the theme's recording and sharing warning colors. */
+#panel.transparent-panel .panel-button.screen-recording-indicator {
+    background-color: #c7162b;
+}
+#panel.transparent-panel .panel-button.screen-recording-indicator:hover,
+#panel.transparent-panel .panel-button.screen-recording-indicator:focus {
+    background-color: #de1930;
+}
+#panel.transparent-panel .panel-button.screen-recording-indicator:active,
+#panel.transparent-panel .panel-button.screen-recording-indicator:checked {
+    background-color: #e7243b;
+}
+#panel.transparent-panel .panel-button.screen-recording-indicator:active:hover,
+#panel.transparent-panel .panel-button.screen-recording-indicator:checked:hover {
+    background-color: #e82d43;
+}
+#panel.transparent-panel .panel-button.screen-sharing-indicator {
+    background-color: #ea5b29;
+}
+#panel.transparent-panel .panel-button.screen-sharing-indicator:hover,
+#panel.transparent-panel .panel-button.screen-sharing-indicator:focus {
+    background-color: #ec6d40;
+}
+#panel.transparent-panel .panel-button.screen-sharing-indicator:active,
+#panel.transparent-panel .panel-button.screen-sharing-indicator:checked {
+    background-color: #ee7b53;
+}
+#panel.transparent-panel .panel-button.screen-sharing-indicator:active:hover,
+#panel.transparent-panel .panel-button.screen-sharing-indicator:checked:hover {
+    background-color: #ef825c;
+}

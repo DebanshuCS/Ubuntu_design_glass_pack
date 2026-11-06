@@ -1,0 +1,6 @@
+{
+  "name": "Minimize To Dock Not App",
+  "description": "Mac OS style genie effect",
+  "uuid": "MinimizeToDockNotApp@yourname.example.com",
+  "shell-version": ["45", "46"]
+}

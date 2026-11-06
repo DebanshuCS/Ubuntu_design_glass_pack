@@ -1,0 +1,193 @@
+@import url("styles/panel.css");
+@import url("styles/dash.css");
+@import url("styles/popup/base.css");
+@import url("styles/popup/transparent.css");
+@import url("styles/popup/light.css");
+@import url("styles/popup/dark.css");
+@import url("styles/popup/menu-items.css");
+@import url("styles/overview.css");
+@import url("styles/appfolders.css");
+@import url("styles/panel-light-text.css");
+
+/* Readable app-folder glass: separate the folder from the app grid. */
+.app-folder-dialog.appfolder-dialogs-dark {
+    background-color: rgb(24, 26, 32);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Balanced frosted surfaces: backdrop color remains visible; white text has a dark base. */
+.bms-popup-background-dark .popup-menu-content,
+.bms-popup-background-dark .popup-sub-menu,
+.bms-popup-background-dark .candidate-popup-content,
+.bms-popup-background-dark .quick-settings,
+.bms-popup-background-dark .quick-toggle-menu,
+.bms-popup-background-dark .osd-window,
+.bms-popup-background-dark .resize-popup,
+.bms-popup-background-dark .switcher-list,
+.bms-popup-background-dark .workspace-switcher,
+.bms-popup-background-dark .modal-dialog,
+.bms-popup-background-dark .run-dialog,
+.bms-popup-background-dark .screenshot-ui-panel,
+.bms-popup-surface-dark .screenshot-ui-panel, 
+.bms-popup-surface-dark .popup-menu-content,
+.bms-popup-surface-dark .popup-sub-menu,
+.bms-popup-surface-dark .candidate-popup-content,
+.bms-popup-surface-dark .quick-settings,
+.bms-popup-surface-dark .quick-toggle-menu,
+.bms-popup-surface-dark .osd-window,
+.bms-popup-surface-dark .resize-popup,
+.bms-popup-surface-dark .switcher-list,
+.bms-popup-surface-dark .workspace-switcher,
+.bms-popup-surface-dark .modal-dialog,
+.bms-popup-surface-dark .run-dialog {
+    background: rgb(24, 26, 32) !important;
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+#panel.transparent-panel {
+    background-color: rgb(24, 26, 32) !important;
+}
+.overview-components-dark .search-entry,
+.overview-components-dark .search-section-content {
+    background-color: rgb(24, 26, 32) !important;
+    color: #f4f4f6;
+}
+.bms-popup-background-dark .notification-banner,
+.bms-popup-surface-dark .notification-banner {
+    background-color: rgb(24, 26, 32) !important;
+    color: #f4f4f6;
+}
+
+/* Soft dropdown edges: avoid stacked broad shadows inside menus. */
+.bms-popup-background-dark .popup-menu-content,
+.bms-popup-background-dark .quick-settings,
+.bms-popup-surface-dark .popup-menu-content,
+.bms-popup-surface-dark .quick-settings {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.bms-popup-background-dark .popup-sub-menu,
+.bms-popup-background-dark .quick-toggle-menu,
+.bms-popup-surface-dark .popup-sub-menu,
+.bms-popup-surface-dark .quick-toggle-menu {
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: none;
+}
+
+/* Readable Overview search on bright wallpaper, retaining backdrop color. */
+.overview-components-dark .search-entry {
+    background-color: rgb(24, 26, 32) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.overview-components-dark .search-entry:hover {
+    background-color: rgb(30, 32, 39) !important;
+}
+.overview-components-dark .search-entry:focus {
+    background-color: rgb(24, 26, 32) !important;
+    border-color: -st-accent-color;
+}
+.overview-components-dark .search-entry StLabel.hint-text,
+.overview-components-dark .search-entry .search-entry-icon {
+    color: #e5e7eb !important;
+}
+
+/* Match application context-menu surfaces. */
+.background-menu .popup-menu-content,
+.bms-popup-background-dark .popup-menu-content,
+.bms-popup-surface-dark .popup-menu-content,
+.bms-popup-background-dark .popup-sub-menu,
+.bms-popup-surface-dark .popup-sub-menu {
+  background-color: rgb(12, 13, 16) !important;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* BEGIN LOCKSCREEN GLASS */
+.unlock-dialog-clock .unlock-dialog-clock-time {
+  font-size: 5.5em;
+  font-weight: 600 !important;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+.unlock-dialog-clock .unlock-dialog-clock-date {
+  font-size: 1.25em;
+  font-weight: 500 !important;
+  color: #e5e7eb;
+}
+.unlock-dialog-clock .unlock-dialog-clock-hint {
+  color: #cbd0d8;
+}
+.unlock-dialog-notifications-container .message,
+.unlock-dialog-notifications-container .unlock-dialog-notification-source {
+  background-color: rgb(12, 13, 16);
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.unlock-dialog StEntry,
+.unlock-dialog StEntry:focus {
+  background-color: rgb(12, 13, 16) !important;
+  color: #ffffff !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+.unlock-dialog StEntry:focus {
+  border-color: #a9c9e8 !important;
+}
+.unlock-dialog StEntry StLabel.hint-text {
+  color: #d5d9df !important;
+}
+/* END LOCKSCREEN GLASS */
+
+/* A light frosted dock with a restrained glass rim. */
+#dashtodockContainer.light-dash .dash-background,
+.light-dash .dash-background {
+  background: rgb(225, 236, 246) !important;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+
+/* Restrained menu translucency: tint without competing background text. */
+.background-menu .popup-menu-content,
+.bms-popup-background-dark .popup-menu-content,
+.bms-popup-background-dark .popup-sub-menu,
+.bms-popup-background-dark .quick-settings,
+.bms-popup-background-dark .quick-toggle-menu,
+.bms-popup-background-dark .candidate-popup-content,
+.bms-popup-background-light .popup-menu-content,
+.bms-popup-background-light .popup-sub-menu,
+.bms-popup-background-light .quick-settings,
+.bms-popup-background-light .quick-toggle-menu,
+.bms-popup-background-light .candidate-popup-content,
+.bms-popup-background-transparent .popup-menu-content,
+.bms-popup-background-transparent .popup-sub-menu,
+.bms-popup-background-transparent .quick-settings,
+.bms-popup-background-transparent .quick-toggle-menu,
+.bms-popup-background-transparent .candidate-popup-content,
+.bms-popup-surface-dark .popup-menu-content,
+.bms-popup-surface-dark .popup-sub-menu,
+.bms-popup-surface-dark .quick-settings,
+.bms-popup-surface-dark .quick-toggle-menu,
+.bms-popup-surface-dark .candidate-popup-content,
+.bms-popup-surface-light .popup-menu-content,
+.bms-popup-surface-light .popup-sub-menu,
+.bms-popup-surface-light .quick-settings,
+.bms-popup-surface-light .quick-toggle-menu,
+.bms-popup-surface-light .candidate-popup-content,
+.bms-popup-surface-transparent .popup-menu-content,
+.bms-popup-surface-transparent .popup-sub-menu,
+.bms-popup-surface-transparent .quick-settings,
+.bms-popup-surface-transparent .quick-toggle-menu,
+.bms-popup-surface-transparent .candidate-popup-content {
+  background: rgb(30, 32, 38) !important;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Solid dock surface; icon animation remains independent. */
+#dashtodockContainer .dash-background {
+  background: rgb(38, 40, 46) !important;
+}

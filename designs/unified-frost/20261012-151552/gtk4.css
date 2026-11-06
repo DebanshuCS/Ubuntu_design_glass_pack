@@ -1,0 +1,40 @@
+/* Subtle grey glass: style surfaces only, keeping stock dropdown text rendering.
+ * Alpha is opacity: 1 is solid, smaller values show more backdrop.
+ */
+window.background.nautilus-window {
+  --window-bg-color: rgba(32, 34, 40, 0.88);
+  --view-bg-color: rgba(32, 34, 40, 0.30);
+  --sidebar-bg-color: rgba(36, 38, 44, 0.45);
+  --sidebar-backdrop-color: rgba(36, 38, 44, 0.45);
+  --headerbar-bg-color: rgba(36, 38, 44, 0.60);
+  --headerbar-backdrop-color: rgba(36, 38, 44, 0.60);
+  background-color: rgba(32, 34, 40, 0.88);
+}
+/* Embedded dialogs stay readable above their parent window. */
+window.background.nautilus-window dialog-host > dialog.background {
+  --window-bg-color: rgba(32, 34, 40, 0.98);
+  --view-bg-color: rgb(32, 34, 40);
+  --headerbar-bg-color: rgb(36, 38, 44);
+}
+window.background.nautilus-window floating-sheet > sheet,
+window.background.nautilus-window bottom-sheet > sheet {
+  background-color: rgba(32, 34, 40, 0.98);
+}
+popover > contents {
+  background-color: rgba(32, 34, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Consistent desktop corner profile: 20px windows, 12px menus. */
+window.csd:not(.maximized):not(.fullscreen):not(.tiled) {
+  border-radius: 20px;
+}
+window.fullscreen, window.tiled {
+  border-radius: 0;
+}
+
+popover > contents { border-radius: 12px; }
+floating-sheet > sheet { border-radius: 20px; }
+
+/* Retain four rounded corners when maximized, except true fullscreen. */
+window.maximized:not(.fullscreen) { border-radius: 20px; }

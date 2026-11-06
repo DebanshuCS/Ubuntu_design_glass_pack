@@ -1,0 +1,10 @@
+{
+  "overview-blur": true,
+  "blacklist": [
+    "Plank",
+    "com.desktop.ding",
+    "Conky",
+    "com.rastersoft.ding",
+    "com.rastersoft.dingtest"
+  ]
+}

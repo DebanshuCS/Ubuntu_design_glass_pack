@@ -1,0 +1,70 @@
+
+/* Desktop glass surface palette */
+/* Subtle dark glass for GTK 4 application windows.
+ * Change surface colors only: never fade text, icons, or whole widgets. */
+window.background {
+  --window-bg-color: rgba(12, 13, 16, 0.90);
+  --window-fg-color: #f4f4f6;
+  --view-bg-color: rgba(12, 13, 16, 0.38);
+  --view-fg-color: #f4f4f6;
+  --headerbar-bg-color: rgba(34, 36, 44, 0.72);
+  --headerbar-backdrop-color: rgba(12, 13, 16, 0.86);
+  --headerbar-fg-color: #f4f4f6;
+  --sidebar-bg-color: rgba(12, 13, 16, 0.86);
+  --sidebar-backdrop-color: rgba(12, 13, 16, 0.86);
+  --sidebar-fg-color: #f4f4f6;
+  --secondary-sidebar-bg-color: rgba(12, 13, 16, 0.84);
+  --secondary-sidebar-fg-color: #f4f4f6;
+  --card-bg-color: rgba(41, 43, 51, 0.20);
+  --card-fg-color: #f4f4f6;
+  --dialog-bg-color: rgba(12, 13, 16, 0.96);
+  --dialog-fg-color: #f4f4f6;
+  --popover-bg-color: rgba(12, 13, 16, 0.95);
+  --popover-fg-color: #f4f4f6;
+}
+
+/* Keep text-heavy preferences and lists separate from windows behind them. */
+window.background preferencespage,
+window.background .preferences-page,
+window.background listview.view,
+window.background columnview.view,
+window.background textview.view {
+  background-color: var(--view-bg-color);
+}
+
+/* Files: deeper black glass, with content slightly more translucent than the sidebar. */
+window.background.nautilus-window {
+  --window-bg-color: rgba(10, 11, 14, 0.82);
+  --view-bg-color: rgba(12, 13, 16, 0.72);
+  --sidebar-bg-color: rgba(12, 13, 16, 0.76);
+  --sidebar-backdrop-color: rgba(12, 13, 16, 0.76);
+}
+/* Nautilus paints its view container; avoid stacking a second fill on its lists. */
+window.background.nautilus-window .nautilus-list-view columnview,
+window.background.nautilus-window .nautilus-list-view listview,
+window.background.nautilus-window .nautilus-grid-view gridview,
+window.background.nautilus-window .nautilus-network-view listview {
+  background: none;
+}
+
+/* Dialogs/popovers need an explicit surface, including non-libadwaita choosers. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+popover > contents {
+  background-color: rgba(12, 13, 16, 0.95);
+  color: #f4f4f6;
+}
+
+/* Shared context-menu surface across GTK versions. */
+popover > contents {
+  background-color: rgba(12, 13, 16, 0.95);
+  background-image: none;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

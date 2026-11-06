@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesGroup" id="shortcuts_group">
+    <property name="title" translatable="yes">Shortcuts</property>
+
+    <child>
+      <object class="AdwSwitchRow" id="useHotkey_row">
+        <property name="title" translatable="yes">Enable keyboard shortcut</property>
+        <property name="subtitle" translatable="yes">Overrides GNOME’s “Show Desktop” shortcut (Super + D)</property>
+      </object>
+    </child>
+
+  </object>
+</interface>

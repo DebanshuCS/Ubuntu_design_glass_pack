@@ -1,0 +1,1 @@
+{"corners": "{'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keepRoundedCorners': <{'maximized': <false>, 'fullscreen': <false>}>, 'borderRadius': <uint32 20>, 'smoothing': <0.5>, 'borderColor': <[0.5, 0.5, 0.5, 1.0]>, 'enabled': <true>}", "blur-corner-when-maximized": false}

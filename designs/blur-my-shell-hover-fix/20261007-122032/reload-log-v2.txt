@@ -1,0 +1,9 @@
+JS ERROR: TypeError: can't access property "get_stage", this.label is null
+itemShowLabel@file:///usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com/appIcons.js:1574:29
+showLabel@file:///usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com/dash.js:59:39
+_syncLabel/this._showLabelTimeoutId<@resource:///org/gnome/shell/ui/dash.js:545:30
+_init/this.timeout_add_once/id<@resource:///org/gnome/gjs/modules/core/overrides/GLib.js:436:13
+@resource:///org/gnome/shell/ui/init.js:20:20
+clutter_actor_iter_next: assertion 'ri->age == ri->root->priv->age' failed
+clutter_actor_iter_next: assertion 'ri->age == ri->root->priv->age' failed
+Source ID 260162 was not found when attempting to remove it

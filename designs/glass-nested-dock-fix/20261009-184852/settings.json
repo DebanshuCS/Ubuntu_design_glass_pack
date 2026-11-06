@@ -1,0 +1,27 @@
+{
+  "org.gnome.shell.extensions.blur-my-shell.dash-to-dock": {
+    "style-dash-to-dock": "0",
+    "override-background": "true",
+    "customize": "false",
+    "brightness": "0.59999999999999998",
+    "sigma": "51",
+    "corner-radius": "18"
+  },
+  "org.gnome.shell.extensions.dash-to-dock": {
+    "dash-max-icon-size": "24",
+    "extend-height": "false",
+    "dock-position": "'BOTTOM'"
+  },
+  "enabled": [
+    "monitor@astraext.github.io",
+    "ubuntu-dock@ubuntu.com",
+    "tiling-assistant@ubuntu.com",
+    "tasks-in-panel@fthx",
+    "space-bar@luchrioh",
+    "show-desktop-plus@attentivecoder",
+    "transparent-top-bar@zhanghai.me",
+    "overview-card-glass@local",
+    "ding@rastersoft.com",
+    "blur-my-shell@aunetx"
+  ]
+}

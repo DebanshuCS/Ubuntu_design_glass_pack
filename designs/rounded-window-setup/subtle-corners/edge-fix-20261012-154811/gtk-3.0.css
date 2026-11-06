@@ -1,0 +1,9 @@
+/* Subtle menu tint; stock buttons, labels and selected values are untouched. */
+menu, popover.background {
+  background-color: rgba(32, 34, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Match native decoration to the compositor's subtle outer curve. */
+window.csd decoration { border-radius: 16px; }
+window.csd headerbar { border-top-left-radius: 16px; border-top-right-radius: 16px; }

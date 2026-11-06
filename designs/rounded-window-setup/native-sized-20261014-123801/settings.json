@@ -1,0 +1,14 @@
+{
+  "rounded": {
+    "global-rounded-corner-settings": "{'padding': <{'left': uint32 0, 'right': 0, 'top': 0, 'bottom': 0}>, 'keepRoundedCorners': <{'maximized': true, 'fullscreen': true}>, 'borderRadius': <uint32 16>, 'smoothing': <0.14999999999999999>, 'borderColor': <(0.5, 0.5, 0.5, 1.0)>, 'enabled': <true>}",
+    "custom-rounded-corner-settings": "@a{sv} {}",
+    "skip-libadwaita-app": "true",
+    "skip-libhandy-app": "false",
+    "settings-version": "uint32 9",
+    "border-width": "0"
+  },
+  "blur": {
+    "corner-radius": "15",
+    "corner-when-maximized": "false"
+  }
+}

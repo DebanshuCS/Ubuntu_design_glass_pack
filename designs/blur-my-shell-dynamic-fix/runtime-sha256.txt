@@ -1,0 +1,4 @@
+faf332d08464b71a54e783c0c8b4bd720776230d21b893c7b75199ecdc094de7  /usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so.1.0.0
+faf332d08464b71a54e783c0c8b4bd720776230d21b893c7b75199ecdc094de7  /usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so.1
+faf332d08464b71a54e783c0c8b4bd720776230d21b893c7b75199ecdc094de7  /usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so
+a9d4baacfb2c7b68361b35ee46298564181bb1905c2c3b48105f12c59923ce9c  /usr/lib/x86_64-linux-gnu/girepository-1.0/Blur-1.0.typelib

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesGroup" id="appearance_group">
+    <property name="title" translatable="yes">Appearance</property>
+
+    <child>
+      <object class="AdwComboRow" id="iconStyle_row">
+        <property name="title" translatable="yes">Icon style</property>
+        <property name="subtitle" translatable="yes">Choose the panel icon appearance</property>
+        <property name="model">
+          <object class="GtkStringList">
+            <items>
+              <item>Auto</item>
+              <item>Desktop</item>
+              <item>Computer</item>
+            </items>
+          </object>
+        </property>
+      </object>
+    </child>
+
+    <child>
+      <object class="AdwSwitchRow" id="showHiddenCount_row">
+        <property name="title" translatable="yes">Show hidden window count</property>
+        <property name="subtitle" translatable="yes">Display a badge with the number of hidden windows</property>
+      </object>
+    </child>
+
+  </object>
+</interface>

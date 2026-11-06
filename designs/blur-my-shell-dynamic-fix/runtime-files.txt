@@ -1,0 +1,4 @@
+/usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so.1.0.0
+/usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so.1
+/usr/lib/x86_64-linux-gnu/libblur-effect-1.0.so
+/usr/lib/x86_64-linux-gnu/girepository-1.0/Blur-1.0.typelib

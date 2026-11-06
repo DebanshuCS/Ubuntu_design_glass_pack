@@ -1,0 +1,4 @@
+Revision 4: transparent SVG background image forces St whole-background prerendering for rounded panel controls.
+Extension ACTIVE; blur settings unchanged; rollback syntax checked.
+Runtime log: reload-log-v4.txt.
+Visual result requires user confirmation; preceding screenshot shows the separate dark corner patches.

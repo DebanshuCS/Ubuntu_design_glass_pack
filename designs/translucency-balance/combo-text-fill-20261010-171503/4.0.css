@@ -1,0 +1,124 @@
+
+/* Desktop glass surface palette */
+/* Subtle dark glass for GTK 4 application windows.
+ * Change surface colors only: never fade text, icons, or whole widgets. */
+window.background {
+  --window-bg-color: rgba(12, 13, 16, 0.94);
+  --window-fg-color: #f4f4f6;
+  --view-bg-color: rgba(12, 13, 16, 0.88);
+  --view-fg-color: #f4f4f6;
+  --headerbar-bg-color: rgba(12, 13, 16, 0.90);
+  --headerbar-backdrop-color: rgba(12, 13, 16, 0.86);
+  --headerbar-fg-color: #f4f4f6;
+  --sidebar-bg-color: rgba(12, 13, 16, 0.86);
+  --sidebar-backdrop-color: rgba(12, 13, 16, 0.86);
+  --sidebar-fg-color: #f4f4f6;
+  --secondary-sidebar-bg-color: rgba(12, 13, 16, 0.84);
+  --secondary-sidebar-fg-color: #f4f4f6;
+  --card-bg-color: rgba(20, 21, 25, 0.80);
+  --card-fg-color: #f4f4f6;
+  --dialog-bg-color: rgba(12, 13, 16, 0.96);
+  --dialog-fg-color: #f4f4f6;
+  --popover-bg-color: rgba(12, 13, 16, 0.95);
+  --popover-fg-color: #f4f4f6;
+}
+
+/* Keep text-heavy preferences and lists separate from windows behind them. */
+window.background preferencespage,
+window.background .preferences-page,
+window.background listview.view,
+window.background columnview.view,
+window.background textview.view {
+  background-color: var(--view-bg-color);
+}
+
+/* Files: deeper black glass, with content slightly more translucent than the sidebar. */
+window.background.nautilus-window {
+  --headerbar-bg-color: rgba(34, 36, 44, 0.72);
+  --card-bg-color: rgba(41, 43, 51, 0.20);
+  --window-bg-color: rgba(10, 11, 14, 0.82);
+  --view-bg-color: rgba(12, 13, 16, 0.72);
+  --sidebar-bg-color: rgba(12, 13, 16, 0.76);
+  --sidebar-backdrop-color: rgba(12, 13, 16, 0.76);
+}
+/* Nautilus paints its view container; avoid stacking a second fill on its lists. */
+window.background.nautilus-window .nautilus-list-view columnview,
+window.background.nautilus-window .nautilus-list-view listview,
+window.background.nautilus-window .nautilus-grid-view gridview,
+window.background.nautilus-window .nautilus-network-view listview {
+  background: none;
+}
+
+/* Dialogs/popovers need an explicit surface, including non-libadwaita choosers. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+popover > contents {
+  background-color: rgba(12, 13, 16, 0.95);
+  color: #f4f4f6;
+}
+
+/* Shared context-menu surface across GTK versions. */
+popover > contents {
+  background-color: rgba(12, 13, 16, 0.95);
+  background-image: none;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Resources uses a legacy named color for its process table. */
+window.background .resources-columnview {
+  background-color: rgba(12, 13, 16, 0.94);
+}
+
+/* Embedded Adwaita dialogs are sheets inside the existing window. */
+window.background dialog-host > dialog.background {
+  --window-bg-color: rgba(12, 13, 16, 0.97);
+  --view-bg-color: rgba(12, 13, 16, 0.94);
+  --headerbar-bg-color: rgba(18, 19, 23, 0.96);
+}
+window.background dialog-host > dialog.background sheet,
+window.background floating-sheet > sheet,
+window.background bottom-sheet > sheet {
+  background-color: rgba(12, 13, 16, 0.97);
+  color: #f4f4f6;
+}
+/* Paint the base explicitly as well as exposing theme color variables. */
+window.background.nautilus-window {
+  background-color: rgba(10, 11, 14, 0.82);
+}
+window.background.nautilus-window .nautilus-grid-view,
+window.background.nautilus-window .nautilus-list-view {
+  background-color: rgba(12, 13, 16, 0.72);
+}
+window.background popover > contents {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+
+/* Explicit base for GTK4 apps that do not consume libadwaita color variables. */
+window.background:not(.nautilus-window):not(.desktopwindow):not(.desktopmenu) {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+
+/* The rounded popup owns its background; option lists must not add a square fill. */
+window.background dropdown popover listview,
+window.background combobox popover listview,
+window.background row.combo popover listview {
+  background-color: transparent;
+}
+window.background dropdown popover listview > row,
+window.background combobox popover listview > row,
+window.background row.combo popover listview > row {
+  border-radius: 8px;
+}
+window.background dropdown > button,
+window.background combobox > button {
+  border-radius: 8px;
+}

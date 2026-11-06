@@ -1,0 +1,102 @@
+/* GLASS CONTROLS — edit these rgba values, then reopen the app.
+ * Last number = opacity: lower means more translucent; 1.0 means opaque.
+ * First three numbers = tint: increase together for a lighter grey.
+ */
+@define-color glass_main rgba(30, 32, 38, 0.90);
+@define-color glass_content rgba(30, 32, 38, 0.82);
+@define-color glass_sidebar rgba(30, 32, 38, 0.82);
+@define-color glass_menu rgba(30, 32, 38, 0.93);
+@define-color glass_dialog rgba(30, 32, 38, 0.95);
+@define-color glass_files_base rgba(30, 32, 38, 0.78);
+@define-color glass_files_main rgba(30, 32, 38, 0.68);
+@define-color glass_files_sidebar rgba(30, 32, 38, 0.72);
+
+
+/* Readable black glass for older GTK dialog and menu surfaces. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog,
+popover.background,
+menu {
+  background-color: @glass_main;
+  color: #f4f4f6;
+}
+
+/* Match GTK4 context menus, including Desktop Icons menus. */
+menu, menu.desktopmenu, popover.background {
+  background-color: @glass_menu;
+  background-image: none;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+window.desktopmenu { background-color: transparent; }
+menu menuitem:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* Strong black glass base for GTK3 application windows and Flutter GTK hosts. */
+window.background:not(.desktopwindow):not(.desktopmenu) {
+  background-color: @glass_main;
+}
+
+/* Shared GTK3 baseline: strong black glass instead of per-application rules. */
+@define-color theme_bg_color @glass_main;
+@define-color theme_fg_color #f4f4f6;
+@define-color theme_base_color @glass_content;
+@define-color theme_text_color #f4f4f6;
+@define-color theme_unfocused_bg_color @glass_main;
+@define-color theme_unfocused_fg_color #e3e5e9;
+@define-color theme_unfocused_base_color @glass_content;
+@define-color theme_unfocused_text_color #e3e5e9;
+window.background:not(.desktopwindow):not(.desktopmenu),
+window.background:not(.desktopwindow):not(.desktopmenu):backdrop {
+  background-color: @glass_main;
+  background-image: none;
+  color: #f4f4f6;
+}
+window.background headerbar {
+  background-color: @glass_main;
+  background-image: none;
+  color: #f4f4f6;
+}
+window.background treeview.view,
+window.background iconview.view,
+window.background textview.view,
+window.background textview text {
+  background-color: @glass_content;
+  color: #f4f4f6;
+}
+
+/* A combo's value is not a document surface: avoid a square inner fill. */
+window.background combobox cellview,
+window.background combobox cellview.view {
+  background-color: transparent;
+  background-image: none;
+}
+window.background combobox button.combo {
+  border-radius: 8px;
+}
+menu menuitem {
+  border-radius: 6px;
+}
+
+/* Clear the selected-text renderer, not the surrounding button or menu. */
+combobox cellview,
+combobox cellview.view,
+combobox cellview cell,
+combobox cellview .cell,
+dropdown > button label {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+/* Dialog and sidebar surfaces keep their own readable tint. */
+window.dialog, window.messagedialog, window.fontchooserdialog,
+window.filechooserdialog, window.colorchooserdialog {
+  background-color: @glass_dialog;
+}
+window.background .sidebar {
+  background-color: @glass_sidebar;
+}
+popover.background, menu { background-color: @glass_menu; }

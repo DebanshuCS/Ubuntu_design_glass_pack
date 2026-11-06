@@ -1,0 +1,9 @@
+{
+  "blur": "true",
+  "static-blur": "false",
+  "pipeline": "'pipeline_default_rounded'",
+  "style-dash-to-dock": "1",
+  "override-background": "true",
+  "unblur-in-overview": "false",
+  "corner-radius": "12"
+}

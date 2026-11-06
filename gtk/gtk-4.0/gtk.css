@@ -1,0 +1,52 @@
+/* Frosted glass — the right way.
+ * Blur My Shell content opacity = 255 (text/icons stay perfectly sharp).
+ * Only the background SURFACES are slightly translucent (0.92 alpha),
+ * so the compositor blur shows through the surface — like real glass.
+ * Text on top stays fully opaque and readable.
+ */
+window.background.nautilus-window {
+  --window-bg-color: rgba(32, 34, 40, 0.97);
+  --view-bg-color: rgba(32, 34, 40, 0.97);
+  --sidebar-bg-color: rgba(36, 38, 44, 0.96);
+  --sidebar-backdrop-color: rgba(36, 38, 44, 0.96);
+  --headerbar-bg-color: rgba(36, 38, 44, 0.97);
+  --headerbar-backdrop-color: rgba(36, 38, 44, 0.97);
+  background-color: rgba(32, 34, 40, 0.97);
+}
+/* Embedded dialogs stay readable above their parent window. */
+window.background.nautilus-window dialog-host > dialog.background {
+  --window-bg-color: rgba(32, 34, 40, 0.98);
+  --view-bg-color: rgb(32, 34, 40);
+  --headerbar-bg-color: rgb(36, 38, 44);
+}
+window.background.nautilus-window floating-sheet > sheet,
+window.background.nautilus-window bottom-sheet > sheet {
+  background-color: rgba(32, 34, 40, 0.98);
+}
+popover > contents {
+  background-color: rgba(32, 34, 40, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* ── Rounded-corner fix (GTK4 / libadwaita) ──────────────────────────
+ * Same strategy as the GTK3 fix: the "Rounded Window Corners Reborn"
+ * extension's shader handles visual clipping.  We keep the CSS
+ * border-radius for shape reporting but make the decoration
+ * transparent so no background or shadow leaks at the corners.
+ */
+window.csd {
+  --window-radius: 10px;
+  border-radius: 10px;
+}
+/* Maximized — keep rounded corners like macOS */
+window.csd.maximized {
+  --window-radius: 10px;
+  border-radius: 10px;
+}
+/* Fullscreen / tiled — edge-to-edge, no rounding */
+window.csd.fullscreen,
+window.csd.tiled, window.csd.tiled-top, window.csd.tiled-bottom,
+window.csd.tiled-left, window.csd.tiled-right {
+  --window-radius: 0px;
+  border-radius: 0px;
+}

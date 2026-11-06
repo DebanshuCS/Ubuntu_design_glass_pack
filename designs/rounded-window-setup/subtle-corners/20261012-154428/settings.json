@@ -1,0 +1,29 @@
+{
+  "rounded": {
+    "settings-version": "uint32 0",
+    "global-rounded-corner-settings": "{'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keepRoundedCorners': <{'maximized': <false>, 'fullscreen': <false>}>, 'borderRadius': <uint32 15>, 'smoothing': <0>, 'borderColor': <[0.5, 0.5, 0.5, 1.0]>, 'enabled': <true>}",
+    "skip-libadwaita-app": "true",
+    "skip-libhandy-app": "false",
+    "border-width": "0",
+    "keep-shadow-for-maximized-fullscreen": "false"
+  },
+  "blur": {
+    "corner-radius": "12",
+    "corner-when-maximized": "true"
+  },
+  "enabled": [
+    "monitor@astraext.github.io",
+    "ubuntu-dock@ubuntu.com",
+    "tiling-assistant@ubuntu.com",
+    "tasks-in-panel@fthx",
+    "space-bar@luchrioh",
+    "show-desktop-plus@attentivecoder",
+    "transparent-top-bar@zhanghai.me",
+    "overview-card-glass@local",
+    "dock-hover-glass@local",
+    "ding@rastersoft.com",
+    "snapd-search-provider@canonical.com",
+    "web-search-provider@ubuntu.com",
+    "blur-my-shell@aunetx"
+  ]
+}

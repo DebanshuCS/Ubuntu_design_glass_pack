@@ -1,0 +1,18 @@
+/* Unified frost; leave text, cell renderers and selection styling unchanged. */
+window.background:not(.desktopwindow):not(.desktopmenu) {
+  background-color: rgba(34, 36, 42, 0.90);
+}
+window.dialog, window.messagedialog, window.fontchooserdialog,
+window.filechooserdialog, window.colorchooserdialog {
+  background-color: rgba(34, 36, 42, 0.96);
+}
+menu, popover.background {
+  background-color: rgba(34, 36, 42, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+window.csd:not(.fullscreen), window.csd:not(.fullscreen) decoration,
+window.maximized:not(.fullscreen), window.maximized:not(.fullscreen) decoration {
+  border-radius: 12px;
+}
+window.fullscreen, window.fullscreen decoration { border-radius: 0; }

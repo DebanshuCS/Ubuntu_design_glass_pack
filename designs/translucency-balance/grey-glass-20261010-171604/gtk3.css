@@ -1,0 +1,79 @@
+
+/* Readable black glass for older GTK dialog and menu surfaces. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog,
+popover.background,
+menu {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}
+
+/* Match GTK4 context menus, including Desktop Icons menus. */
+menu, menu.desktopmenu, popover.background {
+  background-color: rgba(12, 13, 16, 0.95);
+  background-image: none;
+  color: #f4f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+window.desktopmenu { background-color: transparent; }
+menu menuitem:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* Strong black glass base for GTK3 application windows and Flutter GTK hosts. */
+window.background:not(.desktopwindow):not(.desktopmenu) {
+  background-color: rgba(12, 13, 16, 0.94);
+}
+
+/* Shared GTK3 baseline: strong black glass instead of per-application rules. */
+@define-color theme_bg_color rgba(12, 13, 16, 0.96);
+@define-color theme_fg_color #f4f4f6;
+@define-color theme_base_color rgba(16, 17, 21, 0.96);
+@define-color theme_text_color #f4f4f6;
+@define-color theme_unfocused_bg_color rgba(12, 13, 16, 0.96);
+@define-color theme_unfocused_fg_color #e3e5e9;
+@define-color theme_unfocused_base_color rgba(16, 17, 21, 0.96);
+@define-color theme_unfocused_text_color #e3e5e9;
+window.background:not(.desktopwindow):not(.desktopmenu),
+window.background:not(.desktopwindow):not(.desktopmenu):backdrop {
+  background-color: rgba(12, 13, 16, 0.96);
+  background-image: none;
+  color: #f4f4f6;
+}
+window.background headerbar {
+  background-color: rgba(18, 19, 23, 0.96);
+  background-image: none;
+  color: #f4f4f6;
+}
+window.background treeview.view,
+window.background iconview.view,
+window.background textview.view,
+window.background textview text {
+  background-color: rgba(16, 17, 21, 0.96);
+  color: #f4f4f6;
+}
+
+/* A combo's value is not a document surface: avoid a square inner fill. */
+window.background combobox cellview,
+window.background combobox cellview.view {
+  background-color: transparent;
+  background-image: none;
+}
+window.background combobox button.combo {
+  border-radius: 8px;
+}
+menu menuitem {
+  border-radius: 6px;
+}
+
+/* Clear the selected-text renderer, not the surrounding button or menu. */
+combobox cellview,
+combobox cellview.view,
+combobox cellview cell,
+combobox cellview .cell,
+dropdown > button label {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}

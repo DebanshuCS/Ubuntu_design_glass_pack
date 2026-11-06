@@ -1,0 +1,11 @@
+[/]
+accent-color='blue'
+color-scheme='prefer-dark'
+document-font-name='Ubuntu 11'
+font-antialiasing='rgba'
+font-hinting='full'
+font-name='Ubuntu Sans Medium 11 @wght=500'
+gtk-theme='Yaru'
+icon-theme='Yaru'
+monospace-font-name='MesloLGM Nerd Font 11'
+toolkit-accessibility=false

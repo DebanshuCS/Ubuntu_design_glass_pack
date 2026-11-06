@@ -1,0 +1,45 @@
+
+/* Desktop glass surface palette */
+/* Subtle dark glass for GTK 4 application windows.
+ * Change surface colors only: never fade text, icons, or whole widgets. */
+window.background {
+  --window-bg-color: rgba(24, 26, 32, 0.78);
+  --window-fg-color: #f4f4f6;
+  --view-bg-color: rgba(24, 26, 32, 0.12);
+  --view-fg-color: #f4f4f6;
+  --headerbar-bg-color: rgba(34, 36, 44, 0.72);
+  --headerbar-backdrop-color: rgba(28, 30, 38, 0.72);
+  --headerbar-fg-color: #f4f4f6;
+  --sidebar-bg-color: rgba(32, 34, 42, 0.72);
+  --sidebar-backdrop-color: rgba(28, 30, 38, 0.72);
+  --sidebar-fg-color: #f4f4f6;
+  --secondary-sidebar-bg-color: rgba(28, 30, 38, 0.70);
+  --secondary-sidebar-fg-color: #f4f4f6;
+  --card-bg-color: rgba(41, 43, 51, 0.20);
+  --card-fg-color: #f4f4f6;
+  --dialog-bg-color: rgba(37, 39, 47, 0.82);
+  --dialog-fg-color: #f4f4f6;
+  --popover-bg-color: rgba(41, 43, 51, 0.82);
+  --popover-fg-color: #f4f4f6;
+}
+
+/* Keep text-heavy preferences and lists separate from windows behind them. */
+window.background preferencespage,
+window.background .preferences-page,
+window.background listview.view,
+window.background columnview.view,
+window.background textview.view {
+  background-color: var(--view-bg-color);
+}
+
+/* Files: stronger content tint, slightly lighter than the sidebar's 72% layer. */
+window.background.nautilus-window {
+  --view-bg-color: rgba(24, 26, 32, 0.60);
+}
+/* Nautilus paints its view container; avoid stacking a second fill on its lists. */
+window.background.nautilus-window .nautilus-list-view columnview,
+window.background.nautilus-window .nautilus-list-view listview,
+window.background.nautilus-window .nautilus-grid-view gridview,
+window.background.nautilus-window .nautilus-network-view listview {
+  background: none;
+}

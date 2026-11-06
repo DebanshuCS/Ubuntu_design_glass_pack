@@ -1,0 +1,12 @@
+
+/* Readable black glass for older GTK dialog and menu surfaces. */
+window.dialog,
+window.messagedialog,
+window.fontchooserdialog,
+window.filechooserdialog,
+window.colorchooserdialog,
+popover.background,
+menu {
+  background-color: rgba(12, 13, 16, 0.96);
+  color: #f4f4f6;
+}

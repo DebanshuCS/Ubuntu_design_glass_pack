@@ -1,0 +1,16 @@
+@import url("styles/panel.css");
+@import url("styles/dash.css");
+@import url("styles/popup/base.css");
+@import url("styles/popup/transparent.css");
+@import url("styles/popup/light.css");
+@import url("styles/popup/dark.css");
+@import url("styles/popup/menu-items.css");
+@import url("styles/overview.css");
+@import url("styles/appfolders.css");
+@import url("styles/panel-light-text.css");
+
+/* Readable app-folder glass: separate the folder from the app grid. */
+.app-folder-dialog.appfolder-dialogs-dark {
+    background-color: rgba(24, 26, 32, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}

@@ -1,0 +1,12 @@
+clutter_actor_iter_next: assertion 'ri->age == ri->root->priv->age' failed
+clutter_actor_iter_next: assertion 'ri->age == ri->root->priv->age' failed
+Can't update stage views actor unnamed [Gjs_ubuntu-dock_ubuntu_com_docking_DashSlideContainer] is on because it needs an allocation.
+Can't update stage views actor dashtodockBox [StBoxLayout] is on because it needs an allocation.
+Can't update stage views actor bms-dash-backgroundgroup [MetaBackgroundGroup] is on because it needs an allocation.
+Can't update stage views actor bms-dash-blurred-widget [StWidget] is on because it needs an allocation.
+Can't update stage views actor unnamed [MetaBackgroundActor] is on because it needs an allocation.
+Can't update stage views actor unnamed [Gjs_ubuntu-dock_ubuntu_com_docking_DashSlideContainer] is on because it needs an allocation.
+Can't update stage views actor dashtodockBox [StBoxLayout] is on because it needs an allocation.
+Can't update stage views actor bms-dash-backgroundgroup [MetaBackgroundGroup] is on because it needs an allocation.
+Can't update stage views actor bms-dash-blurred-widget [StWidget] is on because it needs an allocation.
+Can't update stage views actor unnamed [MetaBackgroundActor] is on because it needs an allocation.

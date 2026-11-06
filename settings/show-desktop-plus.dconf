@@ -1,0 +1,6 @@
+[/]
+button-position='left'
+current-monitor-only=false
+enable-hotkey=false
+icon-style='desktop'
+left-click-action='toggle-desktop'
